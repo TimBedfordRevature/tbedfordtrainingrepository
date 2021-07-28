@@ -1,4 +1,4 @@
-package com.thevarungupta;
+package day1;
 
 class Employee{
     public int empId;

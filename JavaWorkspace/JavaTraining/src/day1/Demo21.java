@@ -1,4 +1,4 @@
-package com.thevarungupta;
+package day1;
 
 class Car {
     public String name;

@@ -1,4 +1,4 @@
-package com.thevarungupta;
+package day1;
 
 // simple inheritance
 //class A{

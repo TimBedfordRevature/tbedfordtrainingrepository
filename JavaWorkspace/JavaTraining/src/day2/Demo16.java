@@ -1,4 +1,4 @@
-package com.thevarungupta.Day2;
+package day2;
 
 abstract class Shape{
     public double width;

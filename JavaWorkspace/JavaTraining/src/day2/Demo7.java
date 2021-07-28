@@ -1,4 +1,4 @@
-package com.thevarungupta.Day2;
+package day2;
 
 public class Demo7 {
     public static void main(String[] args) {

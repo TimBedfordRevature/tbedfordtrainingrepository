@@ -1,4 +1,4 @@
-package com.thevarungupta;
+package day1;
 
 public class Demo1 {
 

@@ -1,4 +1,4 @@
-package com.thevarungupta;
+package day1;
 
 class Parent1{
     public void display(){

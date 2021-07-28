@@ -1,4 +1,4 @@
-package com.thevarungupta;
+package day1;
 
 class Book2{
     private String title;

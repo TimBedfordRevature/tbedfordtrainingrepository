@@ -1,4 +1,4 @@
-package com.thevarungupta;
+package day1;
 
 // hyrarichal
 class X{

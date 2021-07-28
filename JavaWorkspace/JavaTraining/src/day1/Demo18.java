@@ -1,4 +1,4 @@
-package com.thevarungupta;
+package day1;
 
 class Student{
     private int id;

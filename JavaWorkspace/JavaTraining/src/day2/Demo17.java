@@ -1,4 +1,4 @@
-package com.thevarungupta.Day2;
+package day2;
 
 abstract class Test10{
     public abstract void display1();
