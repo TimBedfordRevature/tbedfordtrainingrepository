@@ -50,5 +50,25 @@ public class Practice {
         newColors.addAll(colors);
 
         System.out.println(newColors);
+
+        //alt method
+        Collections.copy(newColors, colors);
+
+        //Shuffle elements in ArrayList
+        Collections.shuffle(colors);
+
+        //reverse elements in ArrayList
+        Collections.reverse(colors);
+        System.out.println(colors);
+
+        //Extract sublist/portion of ArrayList
+        System.out.println(colors.subList(1,3));
+
+        //Swap elements of ArrayList
+        Collections.swap(colors, 1,2);
+        System.out.println(colors);
+
+
+
     }
 }
