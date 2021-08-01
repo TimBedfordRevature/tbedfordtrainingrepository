@@ -1,4 +1,4 @@
-package day4;
+package assignments;
 // Java Training Day 4 Practice
 
 import java.util.ArrayList;
