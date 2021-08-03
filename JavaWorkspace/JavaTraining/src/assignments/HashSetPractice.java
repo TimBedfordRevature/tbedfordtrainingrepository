@@ -15,6 +15,7 @@ public class HashSetPractice {
 
         System.out.println(hashSet);
 
+        //append to end of hashset
         LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
         linkedHashSet.add("blue");
         linkedHashSet.add("red");
