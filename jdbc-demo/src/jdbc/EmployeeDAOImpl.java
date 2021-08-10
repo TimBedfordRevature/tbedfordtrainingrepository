@@ -23,7 +23,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void addEmployee(Employee employee) throws SQLException {
         String sql = "insert into employee (name, email) values (?,?)";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, employee.getName());
         preparedStatement.setString(2, employee.getEmail());
         int count = preparedStatement.executeUpdate();
@@ -37,7 +37,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void updateEmployee(Employee employee) throws SQLException {
         String sql = "update employee set name = ?, email = ? where id = ?";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, employee.getName());
         preparedStatement.setString(2, employee.getEmail());
         preparedStatement.setInt(3, employee.getId());
@@ -52,7 +52,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void deleteEmployee(int id) throws SQLException {
         String sql = "delete from employee where id = ?";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1, id);
         int count = preparedStatement.executeUpdate();
         if (count > 0)
@@ -81,7 +81,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public Employee employeeById(int id) throws SQLException {
         String query = "select * from employee where id = ?";
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement = connection.prepareStatement(query);
         preparedStatement.setInt(1, id);
         ResultSet resultSet = preparedStatement.executeQuery();
 
