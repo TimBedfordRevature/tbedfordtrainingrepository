@@ -2,6 +2,7 @@ package accounts;
 
 import utilities.ConnectionFactory;
 import utilities.Functions;
+import utilities.UserInterface;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     public static PreparedStatement preparedStatement = null;
     private static ResultSet resultSet = null;
     Connection connection = null;
+    private static Customer temp;
 
     public EmployeeDAOImpl() {
         try {
@@ -23,8 +25,23 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
-    public void approveApplication(Customer customer) throws SQLException {
-        Functions.approveAccount(customer);
+    public void approveApplication(List<Customer> customerList) throws SQLException {
+
+        int size = customerList.size();
+        System.out.println(size);
+        if(customerList.get(0).getName() == null){
+            System.out.println("There are currently no pending account applications\n");
+        }
+        else {
+            for(int i = 0; i < customerList.size(); i++) {
+                temp = customerList.get(i);
+                System.out.println(size + " pending account applications: ");
+                System.out.println(temp);
+                Functions.approveAccount(temp);
+                size--;
+            }
+            customerList.removeAll(customerList);
+        }
     }
 
     @Override
@@ -59,7 +76,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
-    public List<Customer> getCustomers() throws SQLException {
+    public  List<Customer> getCustomers() throws SQLException {
         String query = "select * from customer";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(query);
@@ -78,13 +95,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
-    public void updateCustomer(Customer customer) throws SQLException {
-        String query = "update customer set name = ?, email = ? password = ? where id = ?";
+    public void updateCustomer(int id, int acc_number) throws SQLException {
+        String query = "update customer set acc_number = ? where id = ?";
         preparedStatement = connection.prepareStatement(query);
-        preparedStatement.setString(1, customer.getName());
-        preparedStatement.setString(2, customer.getEmail());
-        preparedStatement.setString(3, customer.getPassword());
-        preparedStatement.setInt(4, customer.getId());
+        preparedStatement.setInt(1, acc_number);
+        preparedStatement.setInt(2, id);
         int count = preparedStatement.executeUpdate();
         if (count > 0)
             System.out.println("account updated");

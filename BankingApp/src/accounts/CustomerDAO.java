@@ -6,15 +6,9 @@ import java.util.List;
 public interface CustomerDAO {
     void addCustomer(Customer customer) throws SQLException;
 
-//    void updateCustomer(Customer customer) throws SQLException;
-
-//    void deleteCustomer(int id) throws SQLException; // customer can only delete their own accounts.
-
-//    List<Customer> getCustomers(int acc_number) throws SQLException;
+    void updateCustomerInfo(String email, String password, int id) throws SQLException;
 
     List<Integer> getAccountNumbers() throws SQLException;
-
- //   Customer customerById(int id); // will be used by employee
 
     Customer customerLogin(int acc_number, String password) throws SQLException;
 

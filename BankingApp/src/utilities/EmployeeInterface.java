@@ -2,16 +2,21 @@ package utilities;
 
 import accounts.*;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeInterface {
     public static EmployeeDAO employeeDAO = EmployeeDAOFactory.getEmployeeDAO();
-    public static CustomerDAO customerDAO = CustomerDAOFactory.getCustomerDAO();
-    public static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
     public static boolean running = true;
+    public static List<Customer> customerList = new ArrayList<>();
+    public static Customer customer = new Customer();
 
 
-    public static void employeeMenu(Employee employee) {
+    public static void employeeMenu(Employee employee) throws SQLException {
         int option = 0;
         System.out.println("Select an action: ");
 
@@ -28,10 +33,43 @@ public class EmployeeInterface {
 
             switch (option){
                 case 1:{
-                        // use multi thread, can use sleep() and notify
+                        employeeDAO.approveApplication(UserInterface.pendingCustomer);
+//                    employeeDAO.approveApplication(employeeDAO.addPendingAccountsToList(UserInterface.sendApplication()));
+                }
+                break;
+                case 2: {
+                    System.out.println("Enter the ID of the customer you are deleting: ");
+                    int id = scanner.nextInt();
+                    employeeDAO.deleteCustomer(id);
+                }
+                break;
+                case 3:{
+                    System.out.println("Enter the customer's account number: ");
+                    int accountNumber = scanner.nextInt();
+                    customer = employeeDAO.getCustomerInfo(accountNumber);
+                    System.out.println(customer);
+                }
+                break;
+                case 4: {
+                    customerList = employeeDAO.getCustomers();
+                    System.out.println(customerList);
+                }
+                break;
+                case 5: {
+                    System.out.println("Enter the customer's ID: ");
+                    int id = scanner.nextInt();
+                    System.out.println("Enter updated customer account number: ");
+                    int accountNumber = scanner.nextInt();
+                    employeeDAO.updateCustomer(id, accountNumber);
+                }
+                break;
+                case 6: {
+                    UserInterface.userInterfaceMenu();
+                    running = false;
                 }
                 break;
             }
         }
+        scanner.close();
     }
 }

@@ -52,7 +52,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return ("\n"+"ID = " + id + ", Name = "  + name + ", Email = " + email + ", Account number = " + acc_number + ", Balance = " + balance);
+        return ("\n"+"ID = " + id + ", Name = "  + name + ", Email = " + email + ", Account number = " + acc_number + ", Balance = " + balance+"\n");
     }
 
     public int getId() {

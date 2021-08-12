@@ -35,55 +35,21 @@ public class CustomerDAOImpl implements CustomerDAO {
             System.out.println("Account added");
         else
             System.out.println("ERROR: Something went wrong");
-
     }
 
-//    @Override
-//    public void updateCustomer(Customer customer) throws SQLException {
-//        String query = "update customer set name = ?, email = ? password = ? where id = ?";
-//        preparedStatement = connection.prepareStatement(query);
-//        preparedStatement.setString(1, customer.getName());
-//        preparedStatement.setString(2, customer.getEmail());
-//        preparedStatement.setString(3, customer.getPassword());
-//        preparedStatement.setInt(4, customer.getId());
-//        int count = preparedStatement.executeUpdate();
-//        if (count > 0)
-//            System.out.println("account updated");
-//        else
-//            System.out.println("ERROR: something went wrong...");
-//    }
-
-//    @Override
-//    public void deleteCustomer(int id) throws SQLException {
-//        String query = "delete from customer where id = ?";
-//        preparedStatement = connection.prepareStatement(query);
-//        preparedStatement.setInt(1, id);
-//        int count = preparedStatement.executeUpdate();
-//        if (count > 0)
-//            System.out.println("account deleted");
-//        else
-//            System.out.println("ERROR: something went wrong...");
-//    }
-
-//    @Override
-//    public List<Customer> getCustomers(int acc_number) throws SQLException {
-//        String query = "select * from customer where acc_number = ?";
-//        preparedStatement = connection.prepareStatement(query);
-//        preparedStatement.setInt(1, acc_number);
-//        resultSet = preparedStatement.executeQuery();
-//
-//        List<Customer> account = new ArrayList<>();
-//        while (resultSet.next()) {
-//            int id = resultSet.getInt(1);
-//            String name = resultSet.getString(2);
-//            String email = resultSet.getString(3);
-//            String password = resultSet.getString(4);
-//            int accNumber = resultSet.getInt(5);
-//            double balance = resultSet.getDouble(6);
-//            account.add(new Customer(id, name, email, password, accNumber, balance));
-//        }
-//        return account;
-//    }
+    @Override
+    public void updateCustomerInfo(String email, String password, int id) throws SQLException {
+        String query = "update customer set email = ?, password = ? where id = ?";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1,email);
+        preparedStatement.setString(2, password);
+        preparedStatement.setInt(3, id);
+        int count = preparedStatement.executeUpdate();
+        if (count > 0)
+            System.out.println("account updated" + "\nEmail: " + email + "\nPassword: " + password);
+        else
+            System.out.println("ERROR: something went wrong...");
+    }
 
     @Override
     public List<Integer> getAccountNumbers() throws SQLException {
@@ -99,7 +65,6 @@ public class CustomerDAOImpl implements CustomerDAO {
         }
         return accNumbers;
     }
-
 
     @Override
     public Customer customerLogin(int acc_number, String password) throws SQLException {

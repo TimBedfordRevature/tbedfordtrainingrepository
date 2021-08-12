@@ -1,6 +1,7 @@
 package utilities;
 
 import accounts.*;
+import banking.Main;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -17,7 +18,8 @@ public class UserInterface {
     private static Employee currentEmployee = new Employee();
     public static CustomerDAO customerDAO = CustomerDAOFactory.getCustomerDAO();
     public static EmployeeDAO employeeDAO = EmployeeDAOFactory.getEmployeeDAO();
-    public static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
+    public static List<Customer> pendingCustomer = new ArrayList<>();
 
     public static void userInterfaceMenu() throws SQLException {
         int option = 0;
@@ -30,7 +32,9 @@ public class UserInterface {
             System.out.println("3 - Employee login");
             System.out.println("4 - Exit app");
             System.out.println("================================");
+
             option = scanner.nextInt();
+
 
             switch (option) {
                 case 1: {
@@ -51,7 +55,7 @@ public class UserInterface {
                     if (currentUser.getId() == 0) {
                         System.out.println("Invalid password/account number. Please try again");
                     } else {
-                        System.out.println("Welcome " + currentUser.getName() + "! Your account ID is: " + currentUser.getId());
+                        System.out.println("Welcome " + currentUser.getName() + "! Your account ID is: " + currentUser.getId() + "\nYour account number is: " + currentUser.getAcc_number());
                         CustomerInterface.CustomerMenu(currentUser);
                     }
                 }
@@ -62,7 +66,7 @@ public class UserInterface {
                     System.out.println("Enter your password: ");
                     String password = scanner.next();
                     currentEmployee = employeeDAO.employeeLogin(empNumber, password);
-                    if(currentEmployee.getId() == 0){
+                    if (currentEmployee.getId() == 0) {
                         System.out.println("Invalid password/employee number. Please try again");
                     } else {
                         System.out.println("Welcome " + currentEmployee.getName() + "!");
@@ -70,17 +74,18 @@ public class UserInterface {
                     }
                 }
                 case 4: {
-                    System.out.println("Thank you for using BankApp");
                     running = false;
                 }
                 break;
+                default: {
+                }
             }
         }
+        scanner.close();
     }
 
     public static void getAccountNumbers() throws SQLException {
         accNumberList = customerDAO.getAccountNumbers();
-        // System.out.println(accNumberList);
     }
 
     public static void createAccount() throws SQLException {
@@ -91,8 +96,9 @@ public class UserInterface {
         System.out.println("Enter your password: ");
         String password = scanner.next();
         int accountNumber = getRndNumber();
-        Customer customer = new Customer(name, email, password, accountNumber, 0.00);
-       employeeDAO.approveApplication(customer);
+        Customer newCustomer = new Customer(name, email, password, accountNumber, 0.00);
+        System.out.println("Please wait while your request is processed");
+        pendingCustomer.add(newCustomer);
     }
 
     public static int getRndNumber() throws SQLException {

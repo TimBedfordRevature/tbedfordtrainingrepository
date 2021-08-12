@@ -25,7 +25,7 @@ public class Functions {
 
         if(approval.equals("y") || approval.equals("yes")) {
             customerDAO.addCustomer(customer);
-            System.out.println("Application Approved! Your account number is: " + customer.getAcc_number());
+            System.out.println("Application Approved");
         }else {
             System.out.println("Application denied");
         }
