@@ -3,30 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="64fb8641-cbb5-4a78-98fd-c7a67b99b0c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/accounts/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/accounts/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/accounts/CustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/accounts/CustomerDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/accounts/CustomerDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/accounts/CustomerDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/accounts/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/accounts/EmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/accounts/EmployeeDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/accounts/EmployeeDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/banking/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/banking/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/utilities/CustomerInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/utilities/CustomerInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/utilities/EmployeeInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/utilities/EmployeeInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/utilities/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/utilities/Functions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project0/utilities/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project0/utilities/UserInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accounts/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accounts/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accounts/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accounts/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accounts/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accounts/CustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accounts/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accounts/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/accounts/CustomerDAOImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accounts/CustomerDAOImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/accounts/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accounts/EmployeeDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/banking/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/banking/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/CustomerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/CustomerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/EmployeeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/EmployeeInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../junit-demo-app/src/main/java/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../junit-demo-app/src/main/java/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../junit-demo-app/src/test/java/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../junit-demo-app/src/test/java/CalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../junit-demo-app/target/classes/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../junit-demo-app/target/classes/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../junit-demo-app/target/test-classes/CalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../junit-demo-app/target/test-classes/CalculatorTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +49,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../log-demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../junit-demo-app" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

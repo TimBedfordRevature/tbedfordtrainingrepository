@@ -26,9 +26,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
     @Override
     public void approveApplication(List<Customer> customerList) throws SQLException {
-
         int size = customerList.size();
-        System.out.println(size);
         if(customerList.get(0).getName() == null){
             System.out.println("There are currently no pending account applications\n");
         }
