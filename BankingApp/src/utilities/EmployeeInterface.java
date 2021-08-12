@@ -29,7 +29,12 @@ public class EmployeeInterface {
             System.out.println("5 - Update Customer Account    |");
             System.out.println("6 - Logout                     |");
             System.out.println("================================");
-            option = scanner.nextInt();
+            try {
+                option = scanner.nextInt();
+            }catch (Exception e){
+                System.out.println("ERROR: Must enter a number");
+                break;
+            }
 
             switch (option){
                 case 1:{

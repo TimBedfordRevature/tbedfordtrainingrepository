@@ -24,7 +24,12 @@ public class CustomerInterface {
             System.out.println("4 - Update info                |");
             System.out.println("5 - Logout                     |");
             System.out.println("================================");
-            option = scanner.nextInt();
+            try {
+                option = scanner.nextInt();
+            }catch (Exception e){
+                System.out.println("ERROR: Must enter a number");
+                break;
+            }
 
             switch (option){
                 case 1: {

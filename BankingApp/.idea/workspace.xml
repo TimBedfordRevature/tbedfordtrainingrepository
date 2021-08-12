@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="64fb8641-cbb5-4a78-98fd-c7a67b99b0c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project0.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accounts/CustomerDAOImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accounts/CustomerDAOImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accounts/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accounts/EmployeeDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/CustomerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/CustomerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/EmployeeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/EmployeeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -32,10 +32,13 @@ public class UserInterface {
             System.out.println("3 - Employee login");
             System.out.println("4 - Exit app");
             System.out.println("================================");
-
-            option = scanner.nextInt();
-
-
+            try {
+                option = scanner.nextInt();
+            }catch (Exception e){
+                System.out.println("ERROR: Must enter a number");
+                break;
+            }
+            
             switch (option) {
                 case 1: {
                     createAccount();
@@ -79,6 +82,7 @@ public class UserInterface {
                 break;
                 default: {
                 }
+                break;
             }
         }
         scanner.close();
