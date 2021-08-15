@@ -38,7 +38,7 @@ public class UserInterface {
                 System.out.println("ERROR: Must enter a number");
                 break;
             }
-            
+
             switch (option) {
                 case 1: {
                     createAccount();

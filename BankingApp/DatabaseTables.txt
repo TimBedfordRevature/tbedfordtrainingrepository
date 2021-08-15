@@ -1,0 +1,23 @@
+mysql> desc employee;
++------------+----------+------+-----+---------+----------------+
+| Field      | Type     | Null | Key | Default | Extra          |
++------------+----------+------+-----+---------+----------------+
+| emp_id     | int      | NO   | PRI | NULL    | auto_increment |
+| name       | char(50) | YES  |     | NULL    |                |
+| password   | char(50) | YES  |     | NULL    |                |
+| emp_number | int      | YES  |     | NULL    |                |
++------------+----------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+mysql> desc customer;
++------------+----------+------+-----+---------+----------------+
+| Field      | Type     | Null | Key | Default | Extra          |
++------------+----------+------+-----+---------+----------------+
+| id         | int      | NO   | PRI | NULL    | auto_increment |
+| name       | char(50) | YES  |     | NULL    |                |
+| email      | char(50) | YES  | UNI | NULL    |                |
+| password   | char(50) | YES  |     | NULL    |                |
+| acc_number | int      | YES  | UNI | NULL    |                |
+| balance    | double   | YES  |     | NULL    |                |
++------------+----------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
